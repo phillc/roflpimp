@@ -1,0 +1,108 @@
+.clear
+{
+    clear: both;
+}
+
+html, body
+{
+    background-color: #5f7dc3;
+}
+
+body
+{
+    font-size: 16px;
+    font-family: Helvetica;
+}
+
+.wrapper
+{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    background-color: #243642;
+    width: 100%;
+    padding-top: 0.4em;
+    float: left;
+}
+
+#header h1 a, #header h2 a
+{
+    color: #FFF;
+    font-weight: bold;
+    line-height: 0.6em;
+    float: left;
+    text-decoration: none;
+    outline: 0;
+}
+
+#header h1
+{
+    font-size: 10em;
+    letter-spacing: -.15em;
+}
+
+#header h2
+{
+    padding-top: .3em;
+    font-size: 3em;
+}
+
+#hide_extra_header
+{
+    margin-top: 1em;
+    position: relative;
+    background-color: #5f7dc3;
+    height: 2.5em;
+    z-index: 2;
+}
+
+#feed_container .feed_column
+{
+    float: left;
+    width: 32%;
+    
+}
+
+#feed_container .feed
+{
+    margin: 0 8px 8px 8px;
+    border: 5px solid #FFF;
+}
+
+#feed_container .feed .feed_header
+{
+    padding: 5px;
+    background-color: #243642;
+    position: relative;
+}
+
+#feed_container .feed h3
+{
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+#feed_container .feed .buttons
+{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+#feed_container .feed ul li
+{
+    border-top: 1px dotted #fff;
+    padding: 2px;
+    position: relative;
+}
+
+#feed_container .feed ul li .item_info
+{
+    display: none;
+    position: absolute;
+}

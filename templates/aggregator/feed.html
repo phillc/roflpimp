@@ -1,0 +1,18 @@
+<div class="feed">
+    <div class="feed_header">
+        <h3>{{ feed.title }}</h3>
+        <div class="buttons">
+            X
+        </div>
+    </div>
+    <ul>
+        {% for item in feed.feeditem_set.first_five %}
+        <li>
+            {{ item.title }}
+            <div class="item_info">
+                {{ item.summary }}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

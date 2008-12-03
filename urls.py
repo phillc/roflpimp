@@ -1,17 +1,15 @@
 from django.conf.urls.defaults import *
+from roflpimp.settings import DEBUG, MEDIA_ROOT, DEV_SERVER
+from django.contrib import admin
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^roflpimp/', include('roflpimp.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/(.*)', admin.site.root),
+    url(r'^$', 'roflpimp.apps.aggregator.views.home', name='home'),
+    (r'^admin/(.*)', admin.site.root),
 )
+
+if DEBUG and DEV_SERVER:
+    urlpatterns += patterns ('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+    )

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="feed_container">
+    <div class="feed_column">
+        {% for feed in first_column %}
+        {% include 'aggregator/feed.html' %}
+        {% endfor %}
+    </div>
+    <div class="feed_column">
+        {% for feed in second_column %}
+        {% include 'aggregator/feed.html' %}
+        {% endfor %}
+    </div>
+    <div class="feed_column">
+        {% for feed in third_column %}
+        {% include 'aggregator/feed.html' %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
