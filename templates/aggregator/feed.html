@@ -1,5 +1,5 @@
-<div class="feed">
-    <div class="feed_header">
+<div class="feed dojoDndItem">
+    <div class="feed_header dojoDndHandle">
         <h3>{{ feed.title }}</h3>
         <div class="buttons">
             X
@@ -7,10 +7,10 @@
     </div>
     <ul>
         {% for item in feed.feeditem_set.first_five %}
-        <li>
+        <li class="feed_item">
             {{ item.title }}
             <div class="item_info">
-                {{ item.summary }}
+                <p>{{ item.summary }}</p>
             </div>
         </li>
         {% endfor %}

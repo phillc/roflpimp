@@ -60,49 +60,73 @@ body
     z-index: 2;
 }
 
+#main
+{
+    margin-top: 10px;
+}
+
 #feed_container .feed_column
 {
     float: left;
     width: 32%;
-    
+    min-height: 12em;
+    border: 0px dashed red;
 }
 
-#feed_container .feed
+.feed
 {
-    margin: 0 8px 8px 8px;
+    margin: 0 8px 16px 8px;
     border: 5px solid #FFF;
 }
 
-#feed_container .feed .feed_header
+.feed .feed_header
 {
     padding: 5px;
     background-color: #243642;
     position: relative;
 }
 
-#feed_container .feed h3
+.feed h3
 {
     color: #fff;
     font-size: 1.25em;
     font-weight: bold;
 }
 
-#feed_container .feed .buttons
+.feed .buttons
 {
     position: absolute;
     top: 3px;
     right: 3px;
 }
 
-#feed_container .feed ul li
+.feed ul li
 {
     border-top: 1px dotted #fff;
     padding: 2px;
     position: relative;
 }
 
-#feed_container .feed ul li .item_info
+.feed ul li .item_info
 {
-    display: none;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    min-width: 12em;
+    min-height: 2em;
+    color: #000;
     position: absolute;
+    display: none;
+}
+
+.feed ul li:hover
+{
+    background-color: #fff;
+}
+
+.dijitTooltip
+{
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid red;
 }

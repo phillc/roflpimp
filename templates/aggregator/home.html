@@ -2,17 +2,17 @@
 
 {% block content %}
 <div id="feed_container">
-    <div class="feed_column">
+    <div class="feed_column" id="first_column">
         {% for feed in first_column %}
         {% include 'aggregator/feed.html' %}
         {% endfor %}
     </div>
-    <div class="feed_column">
+    <div class="feed_column" id="second_column">
         {% for feed in second_column %}
         {% include 'aggregator/feed.html' %}
         {% endfor %}
     </div>
-    <div class="feed_column">
+    <div class="feed_column" id="third_column">
         {% for feed in third_column %}
         {% include 'aggregator/feed.html' %}
         {% endfor %}
