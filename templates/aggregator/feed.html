@@ -8,9 +8,9 @@
     <ul>
         {% for item in feed.feeditem_set.first_five %}
         <li class="feed_item">
-            {{ item.title }}
-            <div class="item_info">
-                <p>{{ item.summary }}</p>
+            <a href="{{ item.link }}">{{ item.title }}</a>
+            <div class="item_info hidden">
+                <p>{{ item.summary|safe }}</p>
             </div>
         </li>
         {% endfor %}

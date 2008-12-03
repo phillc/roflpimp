@@ -107,26 +107,30 @@ body
     position: relative;
 }
 
+.feed a
+{
+    text-decoration: none;
+    color: #000;
+}
 .feed ul li .item_info
 {
     background-color: #fff;
-    top: 0;
+    top: 2em;;
     left: 50%;
-    min-width: 12em;
+    min-width: 30em;
     min-height: 2em;
     color: #000;
     position: absolute;
+    z-index: 4;
+    border: 2px solid red;
+}
+
+.hidden
+{
     display: none;
 }
 
 .feed ul li:hover
 {
     background-color: #fff;
-}
-
-.dijitTooltip
-{
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid red;
 }

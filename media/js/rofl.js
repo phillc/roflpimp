@@ -34,10 +34,14 @@ function init()
     dojo.subscribe("/dnd/cancel", null, unhighlightTargets);
     dojo.subscribe("/dnd/drop", null, unhighlightTargets);
     
-    dijit.Tooltip.defaultPosition=['above', 'below'];
     dojo.forEach(dojo.query('.feed_item'), function(node)
     {
-        new dijit.Tooltip({label:"programmatically created tooltip", connectId:[node]});
+        dojo.connect(node, 'onmouseover', function(){
+            dojo.removeClass(node.getElementsByTagName('div')[0], 'hidden')
+        })
+        dojo.connect(node, 'onmouseout', function(){
+            dojo.addClass(node.getElementsByTagName('div')[0], 'hidden')
+        })
     })
 
 }
