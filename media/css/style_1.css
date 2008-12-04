@@ -49,15 +49,14 @@ body
 {
     padding-top: .3em;
     font-size: 3em;
+    margin-left: 4em;
 }
 
 #hide_extra_header
 {
-    margin-top: 1em;
+    margin-top: 2.5em;
     position: relative;
     background-color: #5f7dc3;
-    height: 2.5em;
-    z-index: 2;
 }
 
 #main

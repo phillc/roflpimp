@@ -1,4 +1,4 @@
-<div class="feed dojoDndItem">
+<div class="feed dojoDndItem" id="feed_{{ feed.id }}">
     <div class="feed_header dojoDndHandle">
         <h3>{{ feed.title }}</h3>
         <div class="buttons">
@@ -10,6 +10,8 @@
         <li class="feed_item">
             <a href="{{ item.link }}">{{ item.title }}</a>
             <div class="item_info hidden">
+                <p><a href="http://mystart.disqus.com/lolcats/">Comment on article</a></p>
+                <p><a href="{{ item.link }}">Go to article</a></p>
                 <p>{{ item.summary|safe }}</p>
             </div>
         </li>

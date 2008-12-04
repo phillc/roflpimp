@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'roflpimp.apps.aggregator.views.home', name='home'),
+    url(r'^update_user/$', 'roflpimp.apps.aggregator.views.update_user', name='update_user'),
     (r'^admin/(.*)', admin.site.root),
 )
 

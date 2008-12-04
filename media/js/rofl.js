@@ -24,6 +24,35 @@ function unhighlightTargets()
     dojo.anim("third_column", props, 200);
 }
 
+function currentState()
+{
+    first_column = []
+    dojo.forEach(dojo.query("#first_column .feed"), function(node){
+        first_column.push(node.id.substring(5))
+    })
+    second_column = []
+    dojo.forEach(dojo.query("#second_column .feed"), function(node){
+        second_column.push(node.id.substring(5))
+    })
+    third_column = []
+    dojo.forEach(dojo.query("#third_column .feed"), function(node){
+        third_column.push(node.id.substring(5))
+    })
+    return {first: first_column, second: second_column, third: third_column}
+}
+
+function sendColumns()
+{
+    state = currentState();
+    dojo.xhrPost({
+	method : 'POST',
+	content : state,
+	url: '/update_user/',
+	mimetype: "text/plain"
+    });
+
+}
+
 function init()
 {
     var first_column = new dojo.dnd.Source("first_column", {withHandles: true});
@@ -33,6 +62,7 @@ function init()
     dojo.subscribe("/dnd/start", null, highlightTargets);
     dojo.subscribe("/dnd/cancel", null, unhighlightTargets);
     dojo.subscribe("/dnd/drop", null, unhighlightTargets);
+    dojo.subscribe("/dnd/drop", null, sendColumns)
     
     dojo.forEach(dojo.query('.feed_item'), function(node)
     {
@@ -43,6 +73,5 @@ function init()
             dojo.addClass(node.getElementsByTagName('div')[0], 'hidden')
         })
     })
-
 }
 dojo.addOnLoad(init);

@@ -1,17 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
 <head>
-<title>ROFL pimp</title>
+<title>MyStart</title>
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/reset/reset-min.css" />
 <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/style_1.css" />
-<script type="text/javascript" src="http://o.aolcdn.com/dojo/1.2.0/dojo/dojo.xd.js" djConfig="parseOnLoad:true"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/dojo-release-1.2.2/dojo/dojo.js" djConfig="parseOnLoad:true"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}js/dojo-release-1.2.2/dojo/dijit.js" djConfig="parseOnLoad:true"></script>
 <script type="text/javascript" src="{{ MEDIA_URL }}js/rofl.js"></script>
 </head>
 <body>
     <div id="header">
         <div class="wrapper">
-            <h1><a href="#">ROFL</a></h1>
-            <h2><a href="#">pimp</a></h2>
+            <h1><a href="#">My</a></h1>
+            <h2><a href="#">start</a></h2>
         </div>
     </div>
     <p class="clear" />
@@ -21,5 +22,20 @@
             {% block content %} {% endblock content %}
         </div>
     </div>
+    <br class="clear" />
+    <center>
+<FORM method=GET action=http://www.google.com/custom>
+<TABLE bgcolor=#FFFFFF cellspacing=0 border=0>
+<tr valign=top><td>
+<A HREF=http://www.google.com/search>
+<IMG SRC=http://www.google.com/logos/Logo_40wht.gif border=0 ALT=Google align=middle></A>
+</td>
+<td>
+<INPUT TYPE=text name=q size=31 maxlength=255 value="">
+<INPUT type=submit name=sa VALUE="Google Search">
+
+</td></tr></TABLE>
+</FORM>
+</center>
 </body>
 </html>
